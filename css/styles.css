@@ -268,7 +268,7 @@ h3 {
 }
 
 .botao-editar,
-.botao-excluir {
+.botao-deletar {
   background: none;
   border: none;
   cursor: pointer;
@@ -277,7 +277,7 @@ h3 {
 }
 
 .botao-editar img,
-.botao-excluir img {
+.botao-deletar img {
   width: 20px;
   height: 20px;
 }

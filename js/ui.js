@@ -12,6 +12,7 @@ const ui = {
 
     async renderizarPensamentos() {
         const listaPensamentos = document.getElementById("lista-pensamentos");
+        listaPensamentos.innerHTML = "";
 
         try {
             const pensamentos = await api.buscarPensamentos();
@@ -47,12 +48,29 @@ const ui = {
 
         const iconeEditar = document.createElement("img");
         iconeEditar.src = "assets/imagens/icone-editar.png";
-        iconeAspas.alt = "Editar";
+        iconeEditar.alt = "Editar";
         botaoEditar.append(iconeEditar);
+
+        const botaoDeletar = document.createElement("button");
+        botaoDeletar.classList.add("botao-deletar");
+        botaoDeletar.onclick = () => {
+            try {
+                api.deletarPensamento(pensamento.id)
+                ui.renderizarPensamentos()
+            } catch (error) {
+                alert("Erro ao deletar pensamento")
+                throw error
+            }
+        }
+
+        const iconeDeletar = document.createElement("img");
+        iconeDeletar.src = "assets/imagens/icone-excluir.png";
+        iconeDeletar.alt = "Deletar";
+        botaoDeletar.append(iconeDeletar);
 
         const icones = document.createElement("div");
         icones.classList.add("icones");
-        icones.append(botaoEditar);
+        icones.append(botaoEditar, botaoDeletar);
 
         li.append(iconeAspas, pensamentoConteudo, pensamentoAutoria, icones);
         listaPensamentos.append(li);
