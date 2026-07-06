@@ -1,11 +1,6 @@
 {
   "pensamentos": [
     {
-      "id": "2a56",
-      "conteudo": "Vc faz TI? Conserta meu celular!",
-      "autoria": "Grupo da família"
-    },
-    {
       "id": "4c7d",
       "conteudo": "Da vida reclama, mas sem ela não vive!",
       "autoria": "Mestre Yoda"
@@ -59,11 +54,6 @@
       "id": "8b4c",
       "conteudo": "A vingança nunca é plena... mata a alma e a envenena...",
       "autoria": "Seu Madruga"
-    },
-    {
-      "id": "4d2e",
-      "conteudo": "Se eu for aí e achar, eu esfrego na sua cara!",
-      "autoria": "Mãe"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
