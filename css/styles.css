@@ -229,8 +229,8 @@ h3 {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 32px;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .li-pensamento {
@@ -238,9 +238,9 @@ h3 {
   padding: 16px;
   background: var(--Branco, #fff);
   box-shadow: 8px 8px 0px 0px #154580;
-  flex: 1 1 calc(33.333% - 24px);
-  max-width: calc(33.333% - 24px);
-  min-width: 384px;
+  flex: 1 1 calc(33.333% - 13px);
+  max-width: calc(33.333% - 13px);
+  min-width: 300px;
   min-height: 315px;
   display: flex;
   flex-direction: column;
