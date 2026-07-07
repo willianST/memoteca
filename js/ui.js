@@ -17,7 +17,6 @@ const ui = {
 
         try {
             const pensamentos = await api.buscarPensamentos();
-            pensamentos.forEach(ui.criaElementoPensamento);
             if(pensamentos.length === 0) {
                 mensagemVazia.style.display = "block";
             } else {
@@ -60,9 +59,9 @@ const ui = {
 
         const botaoDeletar = document.createElement("button");
         botaoDeletar.classList.add("botao-deletar");
-        botaoDeletar.onclick = () => {
+        botaoDeletar.onclick = async () => {
             try {
-                api.deletarPensamento(pensamento.id)
+                await api.deletarPensamento(pensamento.id)
                 ui.renderizarPensamentos()
             } catch (error) {
                 alert("Erro ao deletar pensamento")
